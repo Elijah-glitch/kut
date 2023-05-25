@@ -58,7 +58,7 @@ const login = async () => {
 }
 
 const githubLogin = () => {
-  const loginUrl = `https://github.com/login/oauth/authorize?client_id=19a5d1e1b27c48cd21c7&redirect_uri=https://localhost:3000/auth/github&scope=read:user%20user:email&allow_signup=true`
+  const loginUrl = `https://github.com/login/oauth/authorize?client_id=Iv1.9ea793fb7d335979&redirect_uri=https://kuta2023.vercel.app/auth/github&scope=read:user%20user:email&allow_signup=true`
 
   return navigateTo(loginUrl, { external: true })
 }
