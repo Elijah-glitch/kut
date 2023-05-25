@@ -2,32 +2,32 @@ import type { Config } from 'server/common/types/config.type'
 
 const config = useRuntimeConfig()
 
-export const productionConfig: Config = {
-  env: 'production',
+export const devConfig: Config = {
+  env: 'development',
   database: {
-    dbName: config.dbName,
-    dbUrl: config.dbUrl,
+    dbName: 'kut-db-dev',
+    dbUrl: 'mongodb://localhost:27017',
   },
   cors: {
     origin: true,
     credentials: true,
   },
   log: {
-    format: 'tiny',
-    level: 'info',
+    format: 'dev',
+    level: 'debug',
   },
   token: {
     access: {
-      secret: config.accessTokenSecret,
-      expiresIn: config.accessTokenExpiration,
+      secret: 'erpigepigerpipr34634643',
+      expiresIn: '1d',
     },
     refresh: {
-      secret: config.refreshTokenSecret,
-      expiresIn: config.refreshTokenExpiration,
+      secret: 'soeugh8350238230oighwiogh43803480',
+      expiresIn: '3d',
     },
     accountVerification: {
-      secret: config.accountVerificationTokenSecret,
-      expiresIn: config.accountVerificationTokenExpiration,
+      secret: 'ifnew9823rh9283hf208g3h2308gh203gh2038gh230',
+      expiresIn: '7d',
     },
   },
   email: {
@@ -36,7 +36,7 @@ export const productionConfig: Config = {
     senderName: 'Kut',
   },
   domain: {
-    protocol: 'https',
-    url: 'kut.sh',
+    protocol: 'http',
+    url: '0.0.0.0:3000',
   },
 }
