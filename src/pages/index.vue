@@ -9,7 +9,7 @@ definePageMeta({
   middleware: () => {
     const { isLoggedIn } = storeToRefs(useAuthStore())
 
-    if (isLoggedIn.value && isLoggedIn.value === true) return navigateTo('/dashboard')
+    if (isLoggedIn.value && isLoggedIn.value === false) return navigateTo('/dashboard')
   },
 })
 
