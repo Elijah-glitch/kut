@@ -13,7 +13,7 @@ interface State {
 export const useAuthStore = defineStore('authentication-store', {
   state: (): State => ({
     user: null,
-    isLoggedIn: false,
+    isLoggedIn: true,
     accessToken: null,
     refreshToken: null,
   }),
